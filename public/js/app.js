@@ -42,30 +42,34 @@ $(document).ready(function(){
   });
   //toggles between hide and show image
   $(".piece").on("click", function(){
-
+    var clicked = this;
     // flip the piece
-    $(this).find('div').toggleClass('show hidden')
-   
+    $(clicked).find('div').toggleClass('show hidden');
+
     // if $lastClicked is null, that means this was the first turn
-    // so assign $lastClicked to $(this)
-    if ($lastClicked == null) {
-      $lastClicked = $(this);
+    // so assign $lastClicked to $(clicked)
+    if ($lastClicked === null) {
+      $lastClicked = $(clicked);
     }
     // if this is the second turn, we'll go into this code block...
     else {
-      // grab the class that represents the piece's image 
+      var $lastClicked_temp = $lastClicked;
+      var $clicked_temp = $(clicked);
+      // grab the class that represents the piece's image
       // (first class in the list of classes)
-      var _this = $(this).find('div').first().attr('class').split(' ')[0]
+      var _this = $clicked_temp.find('div').first().attr('class').split(' ')[0];
       var last = $lastClicked.find('div').first().attr('class').split(' ')[0];
-      var samePiece = ($(this).attr('id') === $lastClicked.attr('id'))
+      var samePiece = ($clicked_temp.attr('id') === $lastClicked.attr('id'));
 
       if (_this === last && !samePiece) {
         console.log('match!');
       }
       else {
-        console.log('no match!')
-        $(this).find('div').toggleClass('show hidden');
-        $($lastClicked).find('div').toggleClass('show hidden');
+        console.log('no match!');
+        window.setTimeout(function(){
+          $clicked_temp.find('div').toggleClass('show hidden');
+          $($lastClicked_temp).find('div').toggleClass('show hidden');
+        },1000);
       }
       $lastClicked = null;
     }
