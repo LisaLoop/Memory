@@ -1,5 +1,15 @@
 function isMatch($lastClicked, $justClicked, $id, $prevId) {
- 
+ /* jc - 
+    Nice & sound logic and implementation of the Matching game.
+    - I'm not seeing any ajax calls within app.js, which was a requirement.
+    - Try to keep unused code out of production versions of your code (line 38)
+    - Your comments are good, but I'd like to see comments throughout this file.
+    - Line 28 never executed
+    - Your solution for the timeout delay with the card mismatches is fine; 
+      I'd recommend looking into toggling transitions with css instead, as it takes
+      less code and it would look nice and smooth
+    - Excellent formatting and indentation :)
+ */
   var prevVal;
   var currentVal;
   var sameCardClicked = false;
@@ -66,6 +76,7 @@ $(document).ready(function(){
       }
       else {
         console.log('no match!');
+        /* jc - consider changing this code (lines 79 to 82) to use a transition effect from flipped to hidden */
         window.setTimeout(function(){
           $clicked_temp.find('div').toggleClass('show hidden');
           $($lastClicked_temp).find('div').toggleClass('show hidden');

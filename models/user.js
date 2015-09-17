@@ -3,6 +3,10 @@ var mongoose = require("mongoose"),
     Schema = mongoose.Schema,
     bcrypt = require("bcrypt");
 
+/*  jc - good implementation of User document.
+    I would like to see a relationship using at least
+    two documents, perhaps User and Scores?
+*/
 
 //the user schema
 var UserSchema = new Schema({
