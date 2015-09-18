@@ -8,3 +8,7 @@
 //                   "https://octodex.github.com/images/xtocat.jpg",
 //                   "https://octodex.github.com/images/cherryontop-o-cat.png",
 //                   "https://octodex.github.com/images/okal-eltocat.jpg"];
+
+/* 	jc - if you aren't using a seed.js file to seed 
+	your database, do not include the file in production. 
+*/
