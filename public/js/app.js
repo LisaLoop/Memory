@@ -9,7 +9,22 @@ $(document).ready(function(){
       while (divs.length) {
           parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
       }
+      
+      //timer function 
+      var timeSpan = $("#timer");
+      var updatedTime = parseInt(timeSpan.html());
+      
+      var interval = setInterval(function() {
+        updatedTime = updatedTime - 1;
+        timeSpan.html(updatedTime);
+        if(updatedTime === 0) {
+          window.clearInterval(interval);
+          alert("Game Over!")
+        }  
+    }, 1000);
   });
+
+
   //toggles between hide and show image
   $(".piece").on("click", function(){
     var clicked = this;
@@ -33,13 +48,11 @@ $(document).ready(function(){
 
       if (_this === last && !samePiece) {
         console.log('match!');
+        // creates the user score and updates the score 10 pts for each match
         var scoreSpan = $("#score");
         var updatedScore = parseInt(scoreSpan.html());
         updatedScore = updatedScore + 10;
         scoreSpan.html(updatedScore);
-        
-
-
       }
       else {
         console.log('no match!');
