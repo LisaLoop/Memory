@@ -1,4 +1,3 @@
-   
 $(document).ready(function(){
 
   var $lastClicked = null;
@@ -34,6 +33,13 @@ $(document).ready(function(){
 
       if (_this === last && !samePiece) {
         console.log('match!');
+        var scoreSpan = $("#score");
+        var updatedScore = parseInt(scoreSpan.html());
+        updatedScore = updatedScore + 10;
+        scoreSpan.html(updatedScore);
+        
+
+
       }
       else {
         console.log('no match!');
