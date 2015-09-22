@@ -90,7 +90,7 @@ app.get("/", function(req, res){
   // find current user
   req.currentUser(function(err, user) {
     // render page with found user (but one may not be found...)
-    res.render('index', {user: user});
+    res.render('index', {user: user, score: '0'});
   })
 });
 

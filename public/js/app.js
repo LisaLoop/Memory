@@ -1,33 +1,4 @@
-function isMatch($lastClicked, $justClicked, $id, $prevId) {
- 
-  var prevVal;
-  var currentVal;
-  var sameCardClicked = false;
-  if ($lastClicked === undefined) {
-    prevVal = undefined;
-  } else {
-    prevVal = $lastClicked;
-  }
-  currentVal = $justClicked;
-  if ($prevId !== undefined){
-    if($prevId === $id){
-      sameCardClicked = true;
-    }
-  }
-
-  var match = ((!sameCardClicked) && (prevVal === currentVal));
-
-
-  if (match) {
-    // stay flipped
-    alert("match!");
-  } else {
-    // hide clicked elements 
-    $(this).f.toggleClass("hideImg");    
-  }
-
-}
-
+   
 $(document).ready(function(){
 
   var $lastClicked = null;

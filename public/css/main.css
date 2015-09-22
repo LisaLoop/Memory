@@ -19,7 +19,7 @@ body {
   margin: 9%;
   margin-bottom: 5%;
   box-shadow: 10px 10px 5px #888888;
-  border:2px solid  #666666;
+  border:2px solid  #bfff7f;
   border-radius: 20px;
 }
 
@@ -27,7 +27,7 @@ body {
 .piece {
   height: 100px;
   width: 100px;
-  border: 3px solid #FFFF7F;
+  border: 2px solid #bfff7f;
   display: inline-block;
   margin: 10px; 
   box-shadow: 10px 10px 5px #888888;
@@ -124,5 +124,6 @@ body {
   height: 100px;
   width: 100px;
   background-size: 150px;
+  border: 1px solid #bfff7f;
   background-image: url("http://pixelgirlpresents.com/images/desktops/railhead/PixelsII_tmb.jpg");
 }
