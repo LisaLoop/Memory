@@ -9,8 +9,16 @@ var UserSchema = new Schema({
   name: String,
   email: {type: String, required: true},
   passwordDigest: {type: String, required: true},
-  createdAt: {type: Date, default: Date.now()}
+  createdAt: {type: Date, default: Date.now()},
+  // scores: [scoreSchema]
 });
+
+//score schema 
+// var scoreSchema = new Schema({
+//   points: Number,
+//   time: Number,
+//   createdAt: {type: Date, default: Date.now()}
+// });
 
 // create a new user with secure (hashed) password (for sign up)
 UserSchema.statics.createSecure = function (email, password, cb) {
@@ -60,7 +68,12 @@ UserSchema.methods.checkPassword = function (password) {
 //define user model
 var User = mongoose.model("User", UserSchema);
 
+//define score model
+// var Score = mongoose.model("Score", ScoreSchema);
+
 //define scores model 
 // var Scores 
+
+
 //export user model
 module.exports = User; 

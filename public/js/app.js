@@ -17,10 +17,10 @@ $(document).ready(function(){
       var interval = setInterval(function() {
         updatedTime = updatedTime - 1;
         timeSpan.html(updatedTime);
-        if(updatedTime === 0) {
-          window.clearInterval(interval);
-          alert("Game Over!")
-        }  
+       
+         
+         gameOver(updatedTime, interval);
+     
     }, 1000);
   });
 
@@ -62,8 +62,33 @@ $(document).ready(function(){
         },1000);
       }
       $lastClicked = null;
-    }
+    } 
 
   });
 
-})
+// NEW FUNCTION TO END GAME 
+  function gameOver(updatedTime, interval){
+    //checking score
+    var score = $("#score").text();
+    if (score === "90" ){
+      window.clearInterval(interval);
+        alert("win")   
+
+  //if win make an ajax post to leaderboard//
+        //$.post (send time and score ("leaderboard", data {
+        //function(res).done{
+        //display win info
+     // if loss don't post to leaderboard
+  } else if (updatedTime === 0) {
+      window.clearInterval(interval);
+      alert("you lost")
+    }
+  }
+   
+      
+
+    
+
+  
+
+});

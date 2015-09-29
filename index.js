@@ -90,7 +90,7 @@ app.get("/", function(req, res){
   // find current user
   req.currentUser(function(err, user) {
     // render page with found user (but one may not be found...)
-    res.render('index', {user: user, score: 0, timer: 20});
+    res.render('index', {user: user, score: 0, timer: 120});
   })
 });
 
@@ -99,11 +99,48 @@ app.post(["/sessions", "/logout"], function(req,res){
   res.redirect("/");
   });
 
+//###########################################################
+//db access to render previous scores
+// app.get("/leaderboard", function(req, res){
+  // res.render('leaderboard');
+  //############ display all user scores on leaderboard
 
-app.get("/leaderboard", function(req, res){
-  res.render('leaderboard');
-});
+  //find one user
+  // db.User.findOne({_id: req.session.id},
+  //   function(err, user){
+// if err will return err
+        // if(err){ console.log(err);
+        //   res.sendstatus(400);}
+        //   //else send user's scores from scores array
+        //   res.send(user.scores);
+          //send scores to leaderboard via app.js OR 
+          //res.render("leaderboard", scores);
+//     }
+//   )
+// });
+//###### post to leaderboard 
+// app.post("/leaderboard", function(req, res){
+//   var points = req.body.data.points
+//   var time = req.body.data.time;
+  //find user in db.user
+  // db.user.findOne({_id: req.session.id},
+  //   function(err, user){
+      //we have our user
+      // var win = points time;
+      // user.scores.push(win);
+      //save function 
+      // user.save(function(err, success){
+//         if(success){
+//           console.log("yay")
+//         } else {
+//             console.log(err);
+//           }
+//           res.send(err || success);
+//       })
 
+//     })
+// });
+//###############################################################
  /*
  * Server
  */
