@@ -101,14 +101,13 @@ app.post(["/sessions", "/logout"], function(req,res){
 
 //###########################################################
 //db access to render previous scores
-// app.get("/leaderboard", function(req, res){
-  // res.render('leaderboard');
+  app.get("/leaderboard", function(req, res){
+    res.render('leaderboard');
   //############ display all user scores on leaderboard
 
   //find one user
   // db.User.findOne({_id: req.session.id},
   //   function(err, user){
-// if err will return err
         // if(err){ console.log(err);
         //   res.sendstatus(400);}
         //   //else send user's scores from scores array

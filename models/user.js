@@ -13,12 +13,7 @@ var UserSchema = new Schema({
   // scores: [scoreSchema]
 });
 
-//score schema 
-// var scoreSchema = new Schema({
-//   points: Number,
-//   time: Number,
-//   createdAt: {type: Date, default: Date.now()}
-// });
+
 
 // create a new user with secure (hashed) password (for sign up)
 UserSchema.statics.createSecure = function (email, password, cb) {
@@ -71,8 +66,6 @@ var User = mongoose.model("User", UserSchema);
 //define score model
 // var Score = mongoose.model("Score", ScoreSchema);
 
-//define scores model 
-// var Scores 
 
 
 //export user model
