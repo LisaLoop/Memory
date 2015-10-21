@@ -101,50 +101,52 @@ app.post(["/sessions", "/logout"], function(req,res){
 
 //###########################################################
 //db access to render previous scores
-  app.get("/leaderboard", function(req, res){
+  app.get("partials/leaderboard", function(req, res){
     res.render('leaderboard');
   //############ display all user scores on leaderboard
 
   //find one user
-  // db.User.findOne({_id: req.session.id},
-  //   function(err, user){
-        // if(err){ console.log(err);
-        //   res.sendstatus(400);}
-        //   //else send user's scores from scores array
-        //   res.send(user.scores);
-          //send scores to leaderboard via app.js OR 
-          //res.render("leaderboard", scores);
-//     }
-//   )
-// });
-//###### post to leaderboard 
-// app.post("/leaderboard", function(req, res){
-//   var points = req.body.data.points
-//   var time = req.body.data.time;
-  //find user in db.user
-  // db.user.findOne({_id: req.session.id},
-  //   function(err, user){
-      //we have our user
-      // var win = points time;
-      // user.scores.push(win);
-      //save function 
-      // user.save(function(err, success){
-//         if(success){
-//           console.log("yay")
-//         } else {
-//             console.log(err);
-//           }
-//           res.send(err || success);
-//       })
+  db.User.findOne({_id: req.session.id}, 
+    function(err, user){
+        if(err){ console.log(err);
+        res.sendstatus(400);}
+       // else send user's scores from scores array
+        res.send(user.scores);
+          
+        res.render("leaderboard", scores);
+     }
+   )
+ });
 
-//     })
-// });
+//###### post to leaderboard 
+ app.post("partials/leaderboard", function(req, res){
+   var points = req.body.data.points
+   var time = req.body.data.time;
+  // find user in db.user
+   db.user.findOne({_id: req.session.id},
+    function(err, user){
+      //we have our user
+      // var win = points + time;
+      user.scores.push(win);
+      //save function 
+       user.save(function(err, success){
+        if(success){
+          console.log("yay")
+        } else {
+             console.log(err);
+           }
+           res.send(err || success);
+       })
+
+     })
+ });
+
 //###############################################################
  /*
  * Server
  */
  // var listener = app.listen(process.env.PORT || 3000);
 
-var listener = app.listen(3000, function () {
+var listener = app.listen(3000, function() {
   console.log("Listening on port " + listener.address().port);
 });

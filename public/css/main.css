@@ -127,3 +127,13 @@ body {
   border: 1px solid #bfff7f;
   background-image: url("http://pixelgirlpresents.com/images/desktops/railhead/PixelsII_tmb.jpg");
 }
+
+#leaderboard-ul{
+  border: 2px solid red;
+  padding: 20px;
+  height: 350px;
+  width: 200px;
+  float: right;
+  margin-right: 10em;
+}
+
