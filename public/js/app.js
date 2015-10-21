@@ -73,13 +73,12 @@ $(document).ready(function(){
     if (score === "90" ){
       var highScore = score.points;
       window.clearInterval(interval);
-        alert("win, now post to leaderboard");
-        $("#highScore").append(score)
+    //if win make an ajax post to leaderboard//
+      alert("win, now post to leaderboard");
+      $("#highScore").append(score)
 
-  //if win make an ajax post to leaderboard//
-        // $.post(send time ("#score") ("leaderboard", data {
-        // function(res).done{
-        // display win info
+ 
+        
      // if loss don't post to leaderboard
   } else if (updatedTime === 0) {
       window.clearInterval(interval);

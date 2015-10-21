@@ -129,11 +129,11 @@ body {
 }
 
 #leaderboard-ul{
-  border: 2px solid red;
+  border: 2px solid #bfff7f;
   padding: 20px;
-  height: 350px;
+  height: 200px;
   width: 200px;
   float: right;
-  margin-right: 10em;
+  margin: 8%;
 }
 
