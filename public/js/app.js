@@ -72,10 +72,14 @@ $(document).ready(function(){
     var score = $("#score").text();
     if (score === "90" ){
       var highScore = score.points;
+      var time = score.time
       window.clearInterval(interval);
     //if win make an ajax post to leaderboard//
       alert("win, now post to leaderboard");
+      //posts the score
       $("#highScore").append(score)
+      //posts the time
+      $("#time").append(timer)
 
  
         
