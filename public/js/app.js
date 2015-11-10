@@ -75,7 +75,7 @@ $(document).ready(function(){
       var time = score.time
       window.clearInterval(interval);
     //if win make an ajax post to leaderboard//
-      alert("win, now post to leaderboard");
+      alert("You win!");
       //posts the score
       $("#highScore").append(score)
       //posts the time
