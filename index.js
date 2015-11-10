@@ -145,6 +145,7 @@ app.post(["/sessions", "/logout"], function(req,res){
  /*
  * Server
  */
+ .listen(process.env.PORT || 5000)
  // var listener = app.listen(process.env.PORT || 3000);
 
   var listener = app.listen(3000, function() {
