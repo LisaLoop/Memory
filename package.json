@@ -1,4 +1,13 @@
+
 {
+  "name": "memory",
+  "description": "game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+    "postinstall": "bower install"
+  },
+
   "dependencies": {
     "bcrypt": "^0.8.5",
     "body-parser": "^1.13.3",
@@ -10,8 +19,5 @@
     "mongoose": "^4.1.5",
     "nodemon": "^1.4.1"
   },
-  "scripts": {
-    "start": "node index.js",
-    "postinstall": "bower install"
-   }
+ 
 }
