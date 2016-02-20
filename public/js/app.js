@@ -4,6 +4,7 @@ $(document).ready(function(){
   // var $lastClickedId;
   // shuffle function
   $("#reset").on("click", function shuffle(event){
+    alert('afsadfasdffdsafasd');
       var parent = $("#shuffle");
       var divs = parent.children();
       while (divs.length) {

@@ -1,114 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% include partials/head %>
+
+  <title>Memory</title>
+  <script src='public/vendor/jquery/dist/jquery.min.js'></script>
+  <script src='public/vendor/flip/dist/jquery.flip.js'></script>
+  <script src='public/vendor/underscore/underscore.js'></script>
+  <script src='public/vendor/bootstrap/dist/js/bootstrap.min.js'></script> 
+  <link rel='stylesheet' href="public/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="public/css/main.css"/>
+  <script src='public/js/app.js'></script> 
 </head>
 
 <body>
-  <!-- NAVIGATION -->
- <% include partials/nav %>
-  <!-- END NAVIGATION -->
-  <!-- LEADERBOARD -->
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Memory</a>
+    </div>
+    <div id="navbar" class="navbar-collapse">
+    </div>
+  </div>
+</nav>
+
   <div>
 
-     <% include partials/leaderboard %>
+
 
   </div>
   
-
-    <!-- GAMEBOARD -->
       <div class="gameboard">
-        <% include partials/score %>
-        <% include partials/timer %>
+        <span>Score: </span><span id="score">0</span>
+        <span>  Timer: </span><span id="timer">120</span>
         <div id="shuffle">  
-             <!-- div contains 2 nested divs, 2nd nested div contains span/img    --> 
-              <!-- 1 -->
+             
           <div id='1' class="piece">
            <div class="adv-cat hidden"></div>
             <div class="top show"></div>
           </div>
-          <!-- 2 -->
+          
           <div id='2' class="piece">
             <div class="adv-cat hidden"></div>
             <div class="top show"></div>
           </div>
-              <!-- 3 --> 
+          
           <div id='3' class="piece">
             <div class="link-cat hidden"></div>
             <div class="top show"></div>  
           </div>
-          <!-- 4 -->
+          
           <div id='4' class="piece">
             <div class="link-cat hidden"></div>
             <div class="top show"></div>  
           </div>
-          <!-- 5 -->
+          
           <div id='5' class="piece">
             <div class="megacat hidden"></div>
             <div class="top show"></div>  
           </div>    
-          <!-- 6 -->
+          
           <div id='6' class="piece">
             <div class="megacat hidden"></div>
             <div class="top show"></div>  
           </div> 
-          <!-- 7 -->
+          
           <div id='7' class="piece">
             <div class="plumbercat hidden"></div>
             <div class="top show"></div>  
           </div> 
-          <!-- 8 -->
+          
           <div id='8' class="piece">
             <div class="plumbercat hidden"></div>
             <div class="top show"></div>  
           </div> 
-          <!-- 9 -->
+          
           <div id='9' class="piece">
             <div class="riddlecat hidden"></div>
             <div class="top show"></div>  
           </div> 
             
-          <!-- 10 -->
+          
           <div id='10' class="piece">
             <div class="riddlecat hidden"></div>
             <div class="top show"></div>  
           </div> 
-          <!-- 11 -->
+          
           <div id='11' class="piece">
             <div class="scarletteocat hidden"></div>
             <div class="top show"></div>  
           </div> 
-          <!-- 12 -->
+          
           <div id='12' class="piece">
             <div class="scarletteocat hidden"></div>
             <div class="top show"></div>  
           </div>
-          <!-- 13 -->
+          
           <div id='13' class="piece">
             <div class="poptocat hidden"></div>
             <div class="top show"></div>  
           </div>
-          <!-- 14 -->
+          
           <div id='14' class="piece">
             <div class="poptocat hidden"></div>
             <div class="top show"></div>  
           </div>
-          <!-- 15 -->
+          
           <div id='15' class="piece">
             <div class="xtocat hidden"></div>
             <div class="top show"></div>  
           </div>
-          <!-- 16 -->
+          
           <div id='16' class="piece">
             <div class="xtocat hidden"></div>
             <div class="top show"></div>  
           </div>
-          <!-- 17 -->
+          
           <div id='17' class="piece">
             <div class="cherryontop-o-cat hidden"></div>
             <div class="top show"></div>  
           </div>
-          <!-- 18 -->
+          
           <div id='18' class="piece">
             <div class="cherryontop-o-cat hidden"></div>
             <div class="top show"></div>  
@@ -116,14 +134,14 @@
           
         </div>
       </div><br>
-          <!-- RESET BUTTON -->
-          <center>
+          
+        <center>
           <button type="submit" id ="reset" class="btn btn-default shuffle">SHUFFLE</button>
         </center>  
-         <!-- END RESET BUTTON -->
+        
       </div> 
  </div>
-<!-- FOOTER -->
+<footer>
  <hr>
   <div class="row">
     <ul class="list-unstyled list-inline text-center">
@@ -137,6 +155,6 @@
   </div>
 </div>
 </footer>
-<!-- END FOOTER -->
+
 </body>
 </html>
