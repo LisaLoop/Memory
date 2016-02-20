@@ -1,6 +1,6 @@
 body {
   font-family: 'Oswald', sans-serif;
-  background-image: url("http://pixelgirlpresents.com/images/desktops/j3_concepts/area04layedoutblue.png");
+  background-color: #c0fff4;
 }
 
 .navbar {
@@ -21,6 +21,7 @@ body {
   box-shadow: 10px 10px 5px #888888;
   border:2px solid  #bfff7f;
   border-radius: 20px;
+  background-color: #d3ff7f;
 }
 
 
@@ -33,6 +34,7 @@ body {
   box-shadow: 10px 10px 5px #888888;
   overflow: hidden;
   border-radius: 20px;
+  background-color: #ACE1AF;
 }
 
 #reset {

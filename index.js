@@ -101,8 +101,8 @@ app.post(["/sessions", "/logout"], function(req,res){
 
 //###########################################################
 //db access to render previous scores
-  // app.get("partials/leaderboard", function(req, res){
-  //   res.render('leaderboard');
+  app.get("partials/leaderboard", function(req, res){
+    res.render('leaderboard');
   //############ display all user scores on leaderboard
 
   //find one user
@@ -145,15 +145,8 @@ app.post(["/sessions", "/logout"], function(req,res){
  /*
  * Server
  */
- // var listener = app.listen(process.env.PORT || 3000);
+ var listener = app.listen(process.env.PORT || 3000);
 
 // var listener = app.listen(3000, function() {
 //   console.log("Listening on port " + listener.address().port);
 // });
-
-app.listen(port, function() {
-    console.log('Our app is running on http://localhost:' + port);
-});
-
-
-

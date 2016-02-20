@@ -81,8 +81,7 @@ $(document).ready(function(){
       //posts the time
       $("#time").append(timer)
 
- 
-        
+    
      // if loss don't post to leaderboard
   } else if (updatedTime === 0) {
       window.clearInterval(interval);
