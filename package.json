@@ -1,6 +1,9 @@
 
 {
   "name": "memory",
+  "engines": {
+    "node": "5.6.0"
+  }
   "description": "game",
   "main": "server.js",
   "scripts": {
