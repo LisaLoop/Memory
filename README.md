@@ -5,7 +5,7 @@ Technologies used: JavaScript, JQuery, HTML, CSS, Bootstrap.
 Play my game at http://lisaloop.github.io/Memory/
 
 How to play: 
-A one-player game. Try to match all the tiles before the time runs out! 
+Press the "shuffle" button to start the timer and shuffle the tiles on the board. Click on the tiles and try to match them all before the time runs out! 
 
 
 
